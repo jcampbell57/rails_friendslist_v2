@@ -1,27 +1,17 @@
-<div id="<%= dom_id friend %>">
-  <p>
-    <strong>First name:</strong>
-    <%= friend.first_name %>
-  </p>
-
-  <p>
-    <strong>Last name:</strong>
+<div class = 'bg-body-secondary rounded-3 px-4 py-5' id="<%= dom_id friend %>">
+  
+  <h1 class = 'display-4'>
+    <%= friend.first_name %> 
     <%= friend.last_name %>
-  </p>
+  </h1>
 
-  <p>
-    <strong>Email:</strong>
-    <%= friend.email %>
-  </p>
-
-  <p>
-    <strong>Phone:</strong>
-    <%= friend.phone %>
-  </p>
-
-  <p>
-    <strong>Twitter:</strong>
+  <p class = 'lead'>
+    <%= friend.email %> | 
+    <%= friend.phone %> | 
     <%= friend.twitter %>
   </p>
 
+  <br/>
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class: 'btn btn-secondary' %>
+  <%= link_to "Back to friends", friends_path, class: 'btn btn-secondary btn-dark' %>
 </div>
